@@ -1,7 +1,10 @@
 public class Team6SortCompetition extends SortCompetition {
     @Override
     public int challengeOne(int[] arr) {
-        return 0;
+        SortingMethods.mergeSort(arr);
+        int medium = SortingUtil.intMedian(arr);
+
+        return medium;
     }
 
     @Override

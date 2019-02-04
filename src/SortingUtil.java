@@ -166,4 +166,17 @@ public class SortingUtil {
     }
 
 
+
+
+
+
+
+    public static int intMedian(int[] arr){
+
+        if(arr.length%2 == 1){
+            return arr[arr.length/2 + 1];
+        }
+        return (arr[arr.length/2] + arr[arr.length/2 + 1])/2; //Do I need to return double?
+    }
+
 }

@@ -43,7 +43,7 @@ public class SortingMethods {
     }
 
     public static void selectionSort(int[] arr){
-        SortingUtil.printArray(arr);
+        //SortingUtil.printArray(arr);
 
         int minPos = 0;
         //i == currentPostion;
@@ -58,12 +58,14 @@ public class SortingMethods {
             }
             SortingUtil.swap(arr,i,minPos);
         }
+        /*
         if (SortingUtil.isSorted(arr)) {
             SortingUtil.printArray(arr);
         }
         else{
             System.out.println("error");
         }
+        */
     }
 
     public static void selectionSort(double[] arr){
@@ -113,7 +115,7 @@ public class SortingMethods {
     public static void mergeSort(int[] arr){
         int n = arr.length;
         int[] temp = new int[n];
-        mergeSortHelper(arr, n , n-1, temp);
+        mergeSortHelper(arr, 0 , n-1, temp);
     }
 
     public static void mergeSortHelper(int[] arr, int left, int right, int[] temp){
@@ -128,7 +130,7 @@ public class SortingMethods {
     public static void merge(int[] arr, int left, int mid, int right, int[] temp) {
         int i = left;
         int j = mid + 1;
-        int k = right;
+        int k = left;
 
         while ( i <= mid && j <= right){
             if(arr[i] < arr[j]){
