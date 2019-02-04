@@ -21,7 +21,7 @@ public class SortingUtil {
 
 
 
-    public static int[] randIntArr(int count){
+    public static int[] randomIntsArr(int count){
         int[] arr = new int[count];
         for(int i = 0; i<arr.length;i++){
             arr[i] = (int)(Math.random() * 10001);
@@ -29,7 +29,7 @@ public class SortingUtil {
         return arr;
     }
 
-    public static double[] randDoubleArr(int count, double max){
+    public static double[] randomDoubleArr(int count, double max){
         double[] arr = new double[count];
         for(int i = 0; i<arr.length;i++){
             arr[i] = Math.random() * max;

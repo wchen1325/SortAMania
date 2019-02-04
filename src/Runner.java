@@ -1,10 +1,10 @@
 public class Runner {
     public static void main(String[] args){
         SortCompetition team6 = new Team6SortCompetition();
-        int[] randIntArr = randomIntsArr(10000);
-        String[] randSringArr = randomStringArr(10000, 5);
+        int[] randIntArr = SortingUtil.randomIntsArr(10000);
+        String[] randSringArr = SortingUtil.randomStringArr(10000, 5);
         System.out.println("unsorted");
-        printArr(randIntarr);
+        SortingUtil.printArray(randIntArr);
 
         long time = System.currentTimeMillis();
         int median = team6.challengeOne(randIntArr);
@@ -13,6 +13,6 @@ public class Runner {
         System.out.println("Median equals; " + median);
 
         System.out.println("Sorted");
-        printArr(randIntArr);
+        SortingUtil.printArray(randIntArr);
     }
 }
