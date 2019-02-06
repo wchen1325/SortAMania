@@ -94,7 +94,6 @@ public class SortingMethods {
     }
 
     public static void insertionSort(int[] arr){
-        SortingUtil.printArray(arr);
 
         for (int i=1; i< arr.length; i++){
             int currentPos=i;
@@ -103,12 +102,6 @@ public class SortingMethods {
                 currentPos--;
 
             }
-        }
-        if (SortingUtil.isSorted(arr)) {
-            SortingUtil.printArray(arr);
-        }
-        else{
-            System.out.println("error");
         }
     }
 
