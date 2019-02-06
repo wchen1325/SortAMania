@@ -23,7 +23,7 @@ public class Runner {
 
 
 
-
+        /*
 
 
 
@@ -56,6 +56,7 @@ public class Runner {
 
 
 
+        */
 
 
 
@@ -65,8 +66,7 @@ public class Runner {
 
 
 
-
-        randIntArr = SortingUtil.randomIntsArr(100); //challenge 3//
+        randIntArr = SortingUtil.randomIntsArr(10); //challenge 3//
         System.out.println("unsorted");
         SortingUtil.printArray(randIntArr);
 
