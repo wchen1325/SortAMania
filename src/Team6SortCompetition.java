@@ -9,6 +9,9 @@ public class Team6SortCompetition extends SortCompetition {
 
     @Override
     public int challengeTwo(String[] arr, String query) {
+        SortingMethods.mergeSort(arr);
+        int index = SortingUtil.biSearchStr(arr, query);
+
         return 0;
     }
 

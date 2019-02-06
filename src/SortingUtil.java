@@ -179,4 +179,23 @@ public class SortingUtil {
         return (arr[arr.length/2] + arr[arr.length/2 + 1])/2; //Do I need to return double?
     }
 
+
+    public static int biSearchStr(String[] arr, String query){
+        int minPos = 0;
+        int maxPos = arr.length+1;
+
+        while(maxPos>= minPos){
+            int guess = (minPos + maxPos)/2;
+            if(query.compareTo(arr[guess]) == 0){
+                return guess;
+            }
+            else if(query.compareTo(arr[guess]) < 0){
+                maxPos = guess - 1;
+            }
+            else{
+                minPos = guess + 1;
+            }
+        }
+        return -1;
+    }
 }
