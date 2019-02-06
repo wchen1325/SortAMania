@@ -16,8 +16,12 @@ public class Team6SortCompetition extends SortCompetition {
     }
 
     @Override
-    public int challengeThree(int[] arr) {
-        return 0;
+    public int challengeThree(int[] arr)
+    {
+        SortingMethods.insertionSort(arr);
+        int medium = SortingUtil.intMedian(arr);
+
+        return medium;
     }
 
     @Override

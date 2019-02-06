@@ -93,7 +93,7 @@ public class SortingMethods {
         }
     }
 
-    public static void insertionSort(int[]arr){
+    public static void insertionSort(int[] arr){
         SortingUtil.printArray(arr);
 
         for (int i=1; i< arr.length; i++){
