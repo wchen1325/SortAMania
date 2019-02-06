@@ -12,7 +12,7 @@ public class Team6SortCompetition extends SortCompetition {
         SortingMethods.mergeSort(arr);
         int index = SortingUtil.biSearchStr(arr, query);
 
-        return 0;
+        return index;
     }
 
     @Override

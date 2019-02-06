@@ -5,7 +5,7 @@ public class Runner {
 
         String[] randSringArr = SortingUtil.randomStringArr(10000, 5);
 
-        System.out.println("unsorted");
+        System.out.println("unsorted"); //challenge 1//
         SortingUtil.printArray(randIntArr);
 
         long time1 = System.currentTimeMillis();
@@ -21,7 +21,18 @@ public class Runner {
         System.out.println("\n");
 
 
-        randIntArr = SortingUtil.randomIntsArr(100);
+
+
+
+
+
+
+
+
+
+
+
+        randIntArr = SortingUtil.randomIntsArr(100); //challenge 3//
         System.out.println("unsorted");
         SortingUtil.printArray(randIntArr);
 
