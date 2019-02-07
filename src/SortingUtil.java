@@ -181,6 +181,7 @@ public class SortingUtil {
             for (int j = 0; j < arr[i].length; j++) {
                 str = str + String.valueOf(arr[i][j]) + ", ";
             }
+            str = str + "\n";
         }
         System.out.println(str);
     }
