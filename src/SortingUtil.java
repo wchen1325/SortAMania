@@ -16,7 +16,11 @@ public class SortingUtil {
         arr[i]=arr[j];
         arr[j]=temp;
     }
-
+    public static void swap(int[][] arr, int arrNum, int i, int j){
+        int temp = arr[arrNum][i];
+        arr[arrNum][i]=arr[arrNum][j];
+        arr[arrNum][j]=temp;
+    }
 
 
 
@@ -182,6 +186,7 @@ public class SortingUtil {
                 str = str + String.valueOf(arr[i][j]) + ", ";
             }
             str = str + "\n";
+
         }
         System.out.println(str);
     }
