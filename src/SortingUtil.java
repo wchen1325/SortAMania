@@ -177,8 +177,10 @@ public class SortingUtil {
 
     public static void printArray(int[][] arr){
         String str ="";
-        for (int i = 0; i<arr.length;i++){
-            str=str + String.valueOf(arr[i]) + ", ";
+        for (int i = 0; i<arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                str = str + String.valueOf(arr[i][j]) + ", ";
+            }
         }
         System.out.println(str);
     }
