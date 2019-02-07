@@ -52,7 +52,7 @@ public class Runner {
 
 
 
-        randIntArr = SortingUtil.randomIntsArr(10); //challenge 3//
+        randIntArr = SortingUtil.randomIntsArr(1000); //challenge 3//
         System.out.println("unsorted");
         SortingUtil.printArray(randIntArr);
 
@@ -66,6 +66,17 @@ public class Runner {
 
         System.out.println("Sorted");
         SortingUtil.printArray(randIntArr);
+        System.out.println("\n");
 
+
+
+
+
+
+
+
+
+        int[][] rand2DIntArr = SortingUtil.random2DIntArr(10, 10, 10);
+        SortingUtil.printArray(rand2DIntArr);
     }
 }

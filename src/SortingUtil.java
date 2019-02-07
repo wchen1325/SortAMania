@@ -58,6 +58,16 @@ public class SortingUtil {
         return arr;
     }
 
+    public static int[][] random2DIntArr(int rows, int columns, double max){
+        int[][] arr = new int[rows][columns];
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < columns; j++){
+                arr[i][j] = (int)(Math.random()* max);
+            }
+        }
+        return arr;
+    }
+
 
 
 
@@ -161,6 +171,14 @@ public class SortingUtil {
         String str ="";
         for (int i = 0; i<arr.length;i++){
             str=str + arr[i] + ", ";
+        }
+        System.out.println(str);
+    }
+
+    public static void printArray(int[][] arr){
+        String str ="";
+        for (int i = 0; i<arr.length;i++){
+            str=str + String.valueOf(arr[i]) + ", ";
         }
         System.out.println(str);
     }
