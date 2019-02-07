@@ -205,6 +205,14 @@ public class SortingUtil {
         return (arr[arr.length/2] + arr[arr.length/2 - 1])/2; //Do I need to return double?
     }
 
+    public static int IntMedian(int[][] arr){
+        int[] arrM = new int[arr.length];
+        for(int i = 0; i < arr.length;i++){
+            arrM[i] = intMedian(arr[i]);
+        }
+        return intMedian(arrM);
+    }
+
 
 
 
