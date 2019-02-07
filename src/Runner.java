@@ -3,8 +3,6 @@ public class Runner {
         SortCompetition team6 = new Team6SortCompetition();
         int[] randIntArr = SortingUtil.randomIntsArr(10000);
 
-        String[] randSringArr = SortingUtil.randomStringArr(10000, 5);
-
         System.out.println("unsorted"); //challenge 1//
         SortingUtil.printArray(randIntArr);
 
@@ -23,40 +21,28 @@ public class Runner {
 
 
 
-        /*
 
 
 
-
-
-
-
-
-
-        SortCompetition team6 = new Team6SortCompetition();
-        int[] randIntArr = SortingUtil.randomIntsArr(10000);
-
-        String[] randSringArr = SortingUtil.randomStringArr(10000, 5);
-
+        String[] randStringArr = SortingUtil.randomStringArr(10000, 5);
+        randStringArr[10] = "troll";
         System.out.println("unsorted"); //challenge 1//
-        SortingUtil.printArray(randIntArr);
+        SortingUtil.printArray(randStringArr);
 
-        long time1 = System.currentTimeMillis();
+        long time2 = System.currentTimeMillis();
 
-        int median = team6.challengeOne(randIntArr);
+        int index = team6.challengeTwo(randStringArr, "troll");
 
         time1 = System.currentTimeMillis() - time1;
-        System.out.println("Challenge One Time Taken: " + time1 * 0.001 + " Seconds");
-        System.out.println("Median equals; " + median);
+        System.out.println("Challenge Two Time Taken: " + time1 * 0.001 + " Seconds");
+        System.out.println("Index equals; " + index);
 
         System.out.println("Sorted");
-        SortingUtil.printArray(randIntArr);
+        SortingUtil.printArray(randStringArr);
         System.out.println("\n");
 
 
 
-
-        */
 
 
 

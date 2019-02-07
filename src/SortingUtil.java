@@ -180,9 +180,12 @@ public class SortingUtil {
     }
 
 
+
+
+
     public static int biSearchStr(String[] arr, String query){
         int minPos = 0;
-        int maxPos = arr.length+1;
+        int maxPos = arr.length-1;
 
         while(maxPos>= minPos){
             int guess = (minPos + maxPos)/2;
