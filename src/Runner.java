@@ -90,6 +90,8 @@ public class Runner {
 
         System.out.println("Sorted");
         SortingUtil.printArray(rand2DIntArr);
+
+
         System.out.println("\n");
     }
 }

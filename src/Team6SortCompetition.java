@@ -26,13 +26,15 @@ public class Team6SortCompetition extends SortCompetition {
 
     @Override
     public int challengeFour(int[][] arr) {
-        int[] mediums = new int[arr.length];
+        int[] medians = new int[arr.length];
         for(int i = 0; i< arr.length; i++){
             SortingMethods.mergeSort(arr[i]);
-            mediums[i]= SortingUtil.intMedian(arr[i]);
+            medians[i]= SortingUtil.intMedian(arr[i]);
         }
-        SortingMethods.mergeSort(mediums);
-        int arrMedium = SortingUtil.intMedian(mediums);
+        SortingMethods.mergeSort(medians);
+        System.out.println("sorted medians of array.");
+        SortingUtil.printArray(medians);
+        int arrMedium = SortingUtil.intMedian(medians);
         return arrMedium;
     }
 
