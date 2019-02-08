@@ -76,7 +76,20 @@ public class Runner {
 
 
 
-        int[][] rand2DIntArr = SortingUtil.random2DIntArr(10, 10, 10);
+        int[][] rand2DIntArr = SortingUtil.random2DIntArr(9, 9, 10);
+        System.out.println("unsorted");
         SortingUtil.printArray(rand2DIntArr);
+
+        long time4 = System.currentTimeMillis();
+
+        median = team6.challengeFour(rand2DIntArr);
+
+        time4 = System.currentTimeMillis() - time4;
+        System.out.println("Challenge Three Time Taken: " + time4 * 0.001 + " Seconds");
+        System.out.println("Median equals: " + median);
+
+        System.out.println("Sorted");
+        SortingUtil.printArray(rand2DIntArr);
+        System.out.println("\n");
     }
 }
