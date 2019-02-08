@@ -16,11 +16,7 @@ public class SortingUtil {
         arr[i]=arr[j];
         arr[j]=temp;
     }
-    public static void swap(int[][] arr, int arrNum, int i, int j){
-        int temp = arr[arrNum][i];
-        arr[arrNum][i]=arr[arrNum][j];
-        arr[arrNum][j]=temp;
-    }
+
 
 
 
@@ -205,13 +201,7 @@ public class SortingUtil {
         return (arr[arr.length/2] + arr[arr.length/2 - 1])/2; //Do I need to return double?
     }
 
-    public static int IntMedian(int[][] arr){
-        int[] arrM = new int[arr.length];
-        for(int i = 0; i < arr.length;i++){
-            arrM[i] = intMedian(arr[i]);
-        }
-        return intMedian(arrM);
-    }
+
 
 
 

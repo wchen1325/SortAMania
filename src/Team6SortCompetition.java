@@ -26,7 +26,14 @@ public class Team6SortCompetition extends SortCompetition {
 
     @Override
     public int challengeFour(int[][] arr) {
-        return 0;
+        int[] mediums = new int[arr.length];
+        for(int i = 0; i< arr.length; i++){
+            SortingMethods.mergeSort(arr[i]);
+            mediums[i]= SortingUtil.intMedian(arr[i]);
+        }
+        SortingMethods.mergeSort(mediums);
+        int arrMedium = SortingUtil.intMedian(mediums);
+        return arrMedium;
     }
 
     @Override
