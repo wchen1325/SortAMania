@@ -105,6 +105,18 @@ public class SortingMethods {
         }
     }
 
+    public static void insertionSort(Comparable[] arr){
+
+        for (int i=1; i< arr.length; i++){
+            int currentPos=i;
+            while(!(currentPos==0) && arr[currentPos].compareTo(arr[currentPos-1]) < 0 ){
+                SortingUtil.swap(arr, currentPos, currentPos-1);
+                currentPos--;
+
+            }
+        }
+    }
+
     public static void mergeSort(int[] arr){
         int n = arr.length;
         int[] temp = new int[n];

@@ -33,8 +33,8 @@ public class Runner {
 
         int index = team6.challengeTwo(randStringArr, "troll");
 
-        time1 = System.currentTimeMillis() - time1;
-        System.out.println("Challenge Two Time Taken: " + time1 * 0.001 + " Seconds");
+        time2 = System.currentTimeMillis() - time2;
+        System.out.println("Challenge Two Time Taken: " + time2 * 0.001 + " Seconds");
         System.out.println("Index equals; " + index);
 
         System.out.println("Sorted");
@@ -85,13 +85,34 @@ public class Runner {
         median = team6.challengeFour(rand2DIntArr);
 
         time4 = System.currentTimeMillis() - time4;
-        System.out.println("Challenge Three Time Taken: " + time4 * 0.001 + " Seconds");
+        System.out.println("Challenge Four Time Taken: " + time4 * 0.001 + " Seconds");
         System.out.println("Median equals: " + median);
 
         System.out.println("Sorted");
         SortingUtil.printArray(rand2DIntArr);
-
-
         System.out.println("\n");
+
+
+
+
+        Thingy[] things = Thingy.randomThingArr(10000);
+        Thingy query = new Thingy(123);
+        System.out.println("unsorted");
+        SortingUtil.printArray(things);
+
+        long time5 = System.currentTimeMillis();
+
+        int indexC = team6.challengeFive(things,query);
+
+        time5 = System.currentTimeMillis() - time5;
+        System.out.println("Challenge Five Time Taken: " + time5 * 0.001 + " Seconds");
+        System.out.println("Index equals; " + indexC);
+
+        System.out.println("Sorted");
+        SortingUtil.printArray(things);
+        System.out.println("\n");
+
+
+
     }
 }

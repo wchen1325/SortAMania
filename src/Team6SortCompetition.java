@@ -10,7 +10,7 @@ public class Team6SortCompetition extends SortCompetition {
     @Override
     public int challengeTwo(String[] arr, String query) {
         SortingMethods.mergeSort(arr);
-        int index = SortingUtil.biSearchStr(arr, query);
+        int index = SortingUtil.biSearch(arr, query);
 
         return index;
     }
@@ -40,7 +40,10 @@ public class Team6SortCompetition extends SortCompetition {
 
     @Override
     public int challengeFive(Comparable[] arr, Comparable query) {
-        return 0;
+        SortingMethods.insertionSort(arr);
+        int index = SortingUtil.biSearch(arr,query);
+
+        return index;
     }
 
     @Override

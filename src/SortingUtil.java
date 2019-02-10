@@ -17,6 +17,12 @@ public class SortingUtil {
         arr[j]=temp;
     }
 
+    public static void swap(Comparable[] arr, int i, int j){
+        Comparable temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
 
 
 
@@ -187,6 +193,13 @@ public class SortingUtil {
         System.out.println(str);
     }
 
+    public static void printArray(Comparable[] arr){
+        String str="";
+        for(int i =0; i<arr.length;i++){
+            str = str + arr[i] + ", ";
+        }
+        System.out.println(str);
+    }
 
 
 
@@ -207,13 +220,35 @@ public class SortingUtil {
 
 
 
-    public static int biSearchStr(String[] arr, String query){
+    public static int biSearch(String[] arr, String query){
         int minPos = 0;
         int maxPos = arr.length-1;
 
         while(maxPos>= minPos){
             int guess = (minPos + maxPos)/2;
             if(query.compareTo(arr[guess]) == 0){
+                return guess;
+            }
+            else if(query.compareTo(arr[guess]) < 0){
+                maxPos = guess - 1;
+            }
+            else{
+                minPos = guess + 1;
+            }
+        }
+        return -1;
+    }
+
+    public static int biSearch(Comparable[] arr, Comparable query){
+        int minPos = 0;
+        int maxPos = arr.length-1;
+
+        while(maxPos>= minPos){
+            int guess = (minPos + maxPos)/2;
+            if(query.compareTo(arr[guess]) == 0){
+                while(query.compareTo(arr[guess-1]) ==0){
+                    guess--;
+                }
                 return guess;
             }
             else if(query.compareTo(arr[guess]) < 0){
