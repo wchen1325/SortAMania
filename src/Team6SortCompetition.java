@@ -31,7 +31,7 @@ public class Team6SortCompetition extends SortCompetition {
             mergeSort(arr[i]);
             medians[i]= intMedian(arr[i]);
         }
-        mergeSort(medians);
+        mergeSort(medians, arr);
         int arrMedium = intMedian(medians);
         return arrMedium;
     }
@@ -188,6 +188,62 @@ public class Team6SortCompetition extends SortCompetition {
 
 
 
+
+    public static void mergeSort(int[] arr, int[][] arr2){
+        int n = arr.length;
+        int[] temp = new int[n];
+        int[][] temp2 = new int[n][];
+        mergeSortHelper(arr, 0 , n-1, temp, arr2, temp2);
+    }
+
+    public static void mergeSortHelper(int[] arr, int left, int right, int[] temp, int[][] arr2, int[][] temp2){
+        if (left < right){
+            int mid = (left + right)/2;
+            mergeSortHelper(arr,left,mid,temp, arr2, temp2);
+            mergeSortHelper(arr,mid + 1,right,temp, arr2, temp2);
+            merge(arr,left,mid,right,temp, arr2, temp2);
+        }
+    }
+
+    public static void merge(int[] arr, int left, int mid, int right, int[] temp, int[][] arr2, int[][] temp2) {
+        int i = left;
+        int j = mid + 1;
+        int k = left;
+
+        while ( i <= mid && j <= right){
+            if(arr[i] < arr[j]){
+                temp[k] = arr[i];
+                temp2[k] = arr2[i];
+                i++;
+            }
+            else{
+                temp[k] = arr[j];
+                temp2[k]=arr2[j];
+                j++;
+            }
+            k++;
+        }
+
+        while(i<= mid){
+            temp[k] = arr[i];
+            temp2[k] = arr2[i];
+            i++;
+            k++;
+        }
+
+        while(j <= right){
+            temp[k] = arr[j];
+            temp2[k] = arr2[j];
+            j++;
+            k++;
+        }
+
+        for(k = left; k <= right; k++){
+            arr[k] = temp[k];
+            arr2[k] = temp2[k];
+        }
+
+    }
 
     /* SortingUtil
 
